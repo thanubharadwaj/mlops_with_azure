@@ -10,6 +10,6 @@ inputs:
     path: 
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: 
+compute: azureml:aml-instances
 experiment_name: 
 description: 
