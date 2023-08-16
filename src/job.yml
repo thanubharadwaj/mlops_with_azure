@@ -2,14 +2,14 @@ $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
 command: >-
   python 
-  --
+  --diabetes-dev.csv ${{inputs.diabetes}}
   --
 inputs:
   training_data: 
     type: uri_folder 
-    path: 
+    path: experimentation/data
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: azureml:aml-instances
-experiment_name: 
-description: 
+experiment_name: diabetes_exp
+description: It is used to detect whether person has diabetes or not.
